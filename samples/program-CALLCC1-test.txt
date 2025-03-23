@@ -1,0 +1,8 @@
+do +
+   5 
+   do call/cc 
+      L (k) do +
+               do k
+                  2 .
+               do k
+                  3 ....

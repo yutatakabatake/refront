@@ -1,0 +1,7 @@
++ 5 
+  app call/cc 
+      lambda (k) 
+        + app k
+              2
+          app k
+              3

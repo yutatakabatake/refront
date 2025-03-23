@@ -1,0 +1,6 @@
+with handler {  return x -> return x
+                read (_ ; k) -> do x <- apply k "Bob" in apply k x
+                print (s ; k) -> apply k unit} 
+handle do forename <- apply fun x -> read(x;y. return y) unit in 
+        do surename <- apply fun x -> read(x;y. return y) unit in 
+            return pair forename surename

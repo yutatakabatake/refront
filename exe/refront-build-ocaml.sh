@@ -259,7 +259,7 @@ if [ $? -eq 0 ]; then
   echo
 else
   echo
-  echo "Build procces stopped. Please check ${OCAMLYACC_FILE}."
+  echo "Build procces stopped. Please check `basename ${OCAMLYACC_FILE}`."
   echo " 1. Fix it (or a copied one) to make it LALR(1) in OCamlyacc format."
   echo " 2. Run this script again as follows:"
   echo "  ${CMD} -l ${LANG_NAME} -k [fixed_grammar_file_name]"

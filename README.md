@@ -119,13 +119,13 @@ Type `e` here.
 ```
 Enter start symbol : e
 Checking parser.mly...
-/Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly: warning: 157 shift/reduce conflicts [-Wconflicts-sr]
-/Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly: warning: 42 reduce/reduce conflicts [-Wconflicts-rr]
-/Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+/somewhere/over/the/rainbow/refront/samples/build/parser.mly: warning: 157 shift/reduce conflicts [-Wconflicts-sr]
+/somewhere/over/the/rainbow/refront/samples/build/parser.mly: warning: 42 reduce/reduce conflicts [-Wconflicts-rr]
+/somewhere/over/the/rainbow/refront/samples/build/parser.mly: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 
 stop via reduce/reduce
 
-Build procces stopped. Please check /Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly.
+Build procces stopped. Please check parser.mly.
  1. Fix it (or a copied one) to make it LALR(1) in OCamlyacc format.
  2. Run this script again as follows:
   refront-build-ocaml.sh -l CALLCC-one -k [fixed_grammar_file_name]
@@ -216,7 +216,7 @@ parser-generation: grammar not LL(1): shift conflict detected for class "false" 
 
 It is not apparent which rule to modify. Please review the grammar.
 
-Build procces stopped. Please check /Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0322/refront/samples/build/CALLCC-one-fix-eopl-grammar.rkt.
+Build procces stopped. Please check CALLCC-one-fix-eopl-grammar.rkt.
  1. Fix it (or a copied one) to make it LL(1) in SLLGEN format.
  2. Run this script again as follows:
   refront-build-sllgen.sh -l CALLCC-one -k [fixed_grammar_file_name]
@@ -281,16 +281,16 @@ duplicate occurrences of the same symbols should be eliminated)
 ...
 Enter start symbol : e
 Checking parser.mly...
-/Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly: warning: 25 shift/reduce conflicts [-Wconflicts-sr]
-/Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly: warning: 21 reduce/reduce conflicts [-Wconflicts-rr]
-/Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-/Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly:36.11-34: warning: rule useless in parser due to conflicts [-Wother]
+/somewhere/over/the/rainbow/refront/samples/build/parser.mly: warning: 25 shift/reduce conflicts [-Wconflicts-sr]
+/somewhere/over/the/rainbow/refront/samples/build/parser.mly: warning: 21 reduce/reduce conflicts [-Wconflicts-rr]
+/somewhere/over/the/rainbow/refront/samples/build/parser.mly: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+/somewhere/over/the/rainbow/refront/samples/build/parser.mly:36.11-34: warning: rule useless in parser due to conflicts [-Wother]
    36 | 	| e g757 { G757 $1 :: $2 }
       |           ^~~~~~~~~~~~~~~~~~~~~~~~
 
 stop via reduce/reduce
 
-Build procces stopped. Please check /Users/kawabata/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples/build/parser.mly.
+Build procces stopped. Please check parser.mly.
  1. Fix it (or a copied one) to make it LALR(1) in OCamlyacc format.
  2. Run this script again as follows:
   refront-build-ocaml.sh -l CALLCC1 -k [fixed_grammar_file_name]
@@ -341,7 +341,6 @@ It looks that this program invokes the continuation bound to the variable k twic
 ```
 $ cat program-CALLCC1.txt
 +(5 call/cc(fun k -> +(k(2) k(3))))
-kawabata@mbp2024-541: ~/Documents/Lab/CA/Projects/Refront/kawabata-test/0323/refront/samples 
 $ ./CALLCC1-interp.sh ./program-CALLCC1.txt
 (7 8)
 $

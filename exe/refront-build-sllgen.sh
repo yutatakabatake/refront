@@ -207,7 +207,7 @@ if [ $? -eq 0 ]; then
 else
   raco fmt -i ${FIX_GRAMMAR_FILE}
   echo
-  echo "Build procces stopped. Please check ${FIX_GRAMMAR_FILE}."
+  echo "Build procces stopped. Please check `basename ${FIX_GRAMMAR_FILE}`."
   echo " 1. Fix it (or a copied one) to make it LL(1) in SLLGEN format."
   echo " 2. Run this script again as follows:"
   echo "  ${CMD} -l ${LANG_NAME} -k [fixed_grammar_file_name]"

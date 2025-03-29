@@ -19,7 +19,9 @@ You need the following tools:
 - The Redex tool, which is a DSL in Redex.
 - Your favorite parser generator.
   - Currently, SLLGEN and OCamlyacc/OCamllex have been tried.
-	- SLLGEN: The EOPL package is required.
+	- SLLGEN: The EOPL package is required. This package is probably included in the Racket package.
+  - fmt: a code formatter fro Racket
+    - You can install `fmt` by invoking `raco pkg install fmt`.
 	- OCamlyacc/OCamllex: The OCaml language processor with
       ocamlyacc/ocamllex, and in addition, currently, `bison` is
       needed.

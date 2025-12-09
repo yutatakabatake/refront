@@ -315,6 +315,7 @@ echo "#!/bin/bash" >> ${INTERP}
 echo "INPUT_FILE=\$1" >> ${INTERP}
 echo ${BUILDDIR}/${GENERIC_OCAML_PARSER_NAME} \< '${INPUT_FILE}' \> \${INPUT_FILE%.txt}.sexp  >> ${INTERP}
 echo racket ${GENERIC_RUNNER} ${LANG_FILE} '${INPUT_FILE%.txt}.sexp' >> ${INTERP}
+echo raco fmt -i '${INPUT_FILE%.txt}.sexp' >> ${INTERP}
 chmod +x ${INTERP}
 ln -s ${INTERP} ${INTERP_NAME} > /dev/null 2>&1
 

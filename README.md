@@ -13,6 +13,8 @@ automatic, you may easily define your own surface grammar and build a
 parser to connect programs written in the surface language to the core
 language defined in Redex, with hopefully limitted amount of burden.
 
+![Refront](refront.jpg)
+
 ## Requirements
 You need the following tools:
 - The Racket language processor.
